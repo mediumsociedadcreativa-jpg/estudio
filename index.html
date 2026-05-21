@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medium Sociedad Creativa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --lime: #b787ff;
+    --ink: #0F0F0F;
+    --blank: #FFFFFF;
+    --cream: #fffbf5*-;
+    --coral: #cd5302;
+    --verde: #009658;
+    --muted: #6B6B6B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--ink);
+    border-bottom: 2px solid var(--lime);
+  }
+  .nav-logo {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.1rem;
+    color: var(--lime); letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 500;
+    color: #ccc; text-decoration: none;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--lime); }
+
+  /* Hamburger — oculto en desktop */
+  .nav-toggle {
+    display: none;
+    flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: #ccc; border-radius: 2px;
+    transition: background .2s;
+  }
+  .nav-toggle:hover span { background: var(--lime); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 90vh;
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+  }
+  .hero-left {
+    padding: 5rem 3rem 4rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--lime); color: var(--blank);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem; border-radius: 999px;
+    margin-bottom: 2rem; width: fit-content;
+  }
+  .hero-title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 800; line-height: 1.0;
+    color: #fff; letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title span { color: var(--lime); }
+  .hero-sub {
+    font-size: 1rem; font-weight: 300;
+    color: #aaa; line-height: 1.7;
+    max-width: 400px; margin-bottom: 2.5rem;
+  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--lime); color: var(--ink);
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.85rem 2rem; border-radius: 999px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(183,135,255,0.35); }
+
+  .btn-ghost {
+    background: transparent; color: #fff;
+    font-size: 0.9rem; font-weight: 400;
+    padding: 0.85rem 2rem; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    text-decoration: none; cursor: pointer;
+    transition: border-color .2s, color .2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+  .hero-right {
+    position: relative;
+    background: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-visual {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 3rem;
+  }
+  .visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    width: 100%; max-width: 340px;
+  }
+  .vis-block {
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 1rem;
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    animation: fadeUp 0.8s ease both;
+    height: 140px;
+  }
+  .vis-block:nth-child(1) { background: var(--lime); color: var(--blank); animation-delay: 0.1s; }
+  .vis-block:nth-child(2) { background: var(--coral); color: #fff; animation-delay: 0.2s; }
+  .vis-block:nth-child(3) { background: var(--verde); color: #fff; animation-delay: 0.3s; }
+  .vis-block:nth-child(4) { background: #b00f84; border: 1px solid #444; color: #fff; animation-delay: 0.4s; }
+
+  /* ── BAND ── */
+  .band {
+    background: var(--lime);
+    padding: 1rem 2rem;
+    display: flex; gap: 2rem; align-items: center;
+    flex-wrap: wrap;
+  }
+  .band-item {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink);
+  }
+  .band-dot { color: var(--coral); font-size: 1.4rem; line-height: 1; }
+
+  /* ── SERVICES ── */
+  .section { padding: 6rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 1.2rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--coral);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 3.5rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--ink); color: #fff;
+    border-radius: 16px; padding: 2rem;
+    transition: transform .25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card:hover { transform: translateY(-4px); }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+  }
+  .service-card.s1::before { background: var(--lime); }
+  .service-card.s2::before { background: var(--coral); }
+  .service-num {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: 2.5rem; color: rgba(255,255,255,0.08);
+    margin-bottom: 1rem;
+  }
+  .service-name {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.1rem; margin-bottom: 2rem;
+  }
+  .service-desc { font-size: 1.2rem; color: #999; line-height: 1.7; }
+
+  /* ── PORTFOLIO ── */
+  .portfolio-section { background: var(--ink); padding: 6rem 2rem; }
+  .portfolio-section .section-title { color: #fff; }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 12px;
+  }
+  .port-item {
+    border-radius: 12px;
+    display: flex; align-items: flex-end; padding: 1.25rem;
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 700;
+    font-size: 0.8rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: rgba(255,255,255,0.9);
+    position: relative; overflow: hidden;
+    cursor: pointer; transition: transform .25s;
+    min-height: 160px;
+  }
+  .port-item:hover { transform: scale(1.02); }
+  .port-item:nth-child(1) { grid-row: span 2; background: linear-gradient(135deg, #5B3AF5 0%, #9B6FFF 100%); }
+  .port-item:nth-child(2) { background: linear-gradient(135deg, #cd5302 0%, #FFAA00 100%); }
+  .port-item:nth-child(3) { background: linear-gradient(135deg, #00ff99 0%, #00BBEE 100%); color: #FFFFFF; }
+  .port-item:nth-child(4) { background: linear-gradient(135deg, #421f74 0%, #78D800 100%); color: #FFFFFF; }
+  .port-item:nth-child(5) { background: linear-gradient(135deg, #FF2D87 0%, #9B1FF5 100%); }
+
+  .port-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+  }
+  .port-label {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
+    padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.72rem;
+  }
+
+  /* ── ABOUT ── */
+  .about-section { padding: 6rem 2rem; background: var(--cream); }
+  .about-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .about-visual {
+    background: var(--ink); border-radius: 20px;
+    padding: 3rem; display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .about-stat { display: flex; align-items: baseline; gap: 0.9rem; }
+  .stat-num {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: 3rem; color: var(--lime);
+  }
+  .stat-label { font-size: 1.2rem; color: #aaa; }
+  .stat-divider { border: none; border-top: 1px solid #2A2A2A; }
+  .about-text .section-title { margin-bottom: 1rem; }
+  .about-body { font-size: 1.2rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--lime); padding: 5rem 2rem; text-align: center; }
+  .contact-inner { max-width: 640px; margin: 0 auto; }
+  .contact-section .section-title { color: var(--ink); margin-bottom: 1rem; }
+  .contact-sub { font-size: 1.5rem; color: #181818; margin-bottom: 2.5rem; line-height: 1.7; }
+  .contact-email {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 500;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--ink); text-decoration: none;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 0.2rem;
+    display: inline-block; margin-bottom: 2.5rem;
+    word-break: break-all;
+  }
+  .social-row {
+    display: flex; gap: 1rem;
+    justify-content: center; flex-wrap: wrap;
+  }
+  .social-btn {
+    background: var(--ink); color: var(--lime);
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 700;
+    font-size: 0.8rem; letter-spacing: 0.1em;
+    padding:0.9rem 1.7rem; border-radius: 999px;
+    text-decoration: none; transition: transform .2s;
+    display: inline-block;
+  }
+  .social-btn:hover { transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink); color: #d2d2d2;
+    text-align: center; padding: 2rem;
+    font-size: 0.8rem;
+  }
+  footer span { color: var(--lime); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { animation: fadeUp 0.7s ease both; }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — TABLET (max 1024px)
+  ══════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .port-item:nth-child(1) {
+      grid-row: auto;
+      grid-column: span 2;
+      min-height: 220px;
+    }
+    .about-inner { gap: 3rem; }
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — MÓVIL (max 768px)
+  ══════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* Nav: ocultar links, mostrar hamburguesa */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--ink);
+      border-top: 1px solid #222;
+      padding: 0.5rem 0;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 0.85rem 2rem;
+      border-bottom: 1px solid #1a1a1a;
+      font-size: 1rem;
+    }
+    .nav-toggle { display: flex; }
+    nav { position: relative; }
+
+    /* Hero */
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 3rem 1.5rem 3rem; }
+    .hero-right { display: none; }
+
+    /* Band */
+    .band {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .band-dot { display: none; }
+
+    /* Sections */
+    .section { padding: 4rem 1.25rem; }
+    .portfolio-section { padding: 4rem 1.25rem; }
+    .about-section { padding: 4rem 1.25rem; }
+    .contact-section { padding: 3.5rem 1.25rem; }
+
+    /* Services */
+    .services-grid { grid-template-columns: 1fr; }
+
+    /* Portfolio */
+    .portfolio-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 8px;
+    }
+    .port-item:nth-child(1) {
+      grid-row: auto;
+      grid-column: span 2;
+      min-height: 180px;
+    }
+    .port-item { min-height: 130px; }
+
+    /* About */
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .about-visual { padding: 2rem; }
+    .stat-num { font-size: 2.2rem; }
+    .stat-label { font-size: 1rem; }
+
+    /* Contact */
+    .contact-sub { font-size: 1.1rem; }
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — MÓVIL PEQUEÑO (max 400px)
+  ══════════════════════════════════════ */
+  @media (max-width: 400px) {
+    .hero-title { font-size: 2.2rem; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .port-item:nth-child(1) { grid-column: auto; }
+    .hero-cta { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="imagenes/msc.png" width="150" alt="Medium Sociedad Creativa">
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="#servicios" onclick="closeNav()">Ofrecemos</a>
+    <a href="#portafolio" onclick="closeNav()">Ideas</a>
+    <a href="#nosotros" onclick="closeNav()">Conócenos</a>
+    <a href="#contacto" onclick="closeNav()">Cuéntanos</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left fade-in">
+    <span class="hero-tag">Estudio de Diseño Visual</span>
+    <h1 class="hero-title"><span>Ideas </span> que<br>comunican.<br><span>Que</span> impactan.</h1>
+    <p class="hero-sub">Innovar es una actividad de riesgo cuyo principal riesgo es no practicarla. Nos gusta desafiar las convenciones. Transformamos ideas en experiencias visuales memorables.</p>
+    <div class="hero-cta">
+      <a href="#nosotros" class="btn-primary">Conócenos</a>
+      <a href="#contacto" class="btn-ghost">Hablemos →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="visual-grid">
+        <div class="vis-block">Diseño Editorial Digital</div>
+        <div class="vis-block">Diseño Sitios Digitales</div>
+        <div class="vis-block">Identidad Visual</div>
+        <div class="vis-block">Ilustración</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <span class="band-dot" style="color: var(--blank);">✦</span>
+  <span class="band-item">Estamos aquí para ayudarte, nutrir tu creatividad y llevar tus ideas más lejos.</span>
+  <span class="band-dot" style="color: var(--blank);">✦</span>
+  <span class="band-item">Mérida · Yucatán · México</span>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="servicios">
+  <div class="section-inner">
+    <p class="section-label">Lo que hacemos</p>
+    <h2 class="section-title">Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card s1">
+        <div class="service-num">01</div>
+        <h3 class="service-name">Diseño editorial digital</h3>
+        <p class="service-desc">→ Aquí caben ebooks, revistas, informes, storytelling visual, publicaciones educativas, contenido interactivo, incluso tus proyectos infantiles.</p>
+      </div>
+      <div class="service-card s2">
+        <div class="service-num">02</div>
+        <h3 class="service-name">Diseño de sitios digitales</h3>
+        <p class="service-desc">→ Aquí caben landing pages, sitios de marca, UX, estructura de contenido, identidad visual, ilustración, experiencia digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio-section" id="portafolio">
+  <div class="section-inner">
+    <p class="section-label" style="color: var(--lime);">Trabajo reciente</p>
+    <h2 class="section-title">Portafolio</h2>
+    <div class="portfolio-grid">
+      <div class="port-item">
+        <img src="imagenes/MSC-App-Cuentos.jpg" alt="App - Sitio digital">
+        <span class="port-label">App — Sitio digital</span>
+      </div>
+      <div class="port-item">
+        <img src="imagenes/MSC-olas-portada.jpg" alt="Diseño Editorial Digital">
+        <span class="port-label">Diseño Editorial Digital</span>
+      </div>
+      <div class="port-item">
+        <img src="imagenes/MSC-landingPage.jpg" alt="Diseño Landing Page">
+        <span class="port-label">Diseño Landing Page</span>
+      </div>
+      <div class="port-item">
+        <img src="imagenes/MSC-Caricatura-plastilina.jpg" alt="Campaña digital">
+        <span class="port-label">Campaña digital</span>
+      </div>
+      <div class="port-item">
+        <img src="imagenes/MSC-Ilustracion-Digital.jpg" alt="Ilustración digital">
+        <span class="port-label">Ilustración digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="nosotros">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-stat">
+        <span class="stat-num">+20</span>
+        <span class="stat-label">años de experiencia</span>
+      </div>
+      <hr class="stat-divider">
+      <div class="about-stat">
+        <span class="stat-num">+Ideas</span>
+        <span class="stat-label">inspiradoras, con impacto</span>
+      </div>
+      <hr class="stat-divider">
+      <div class="about-stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">diseño con propósito</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Somos</p>
+      <h2 class="section-title">Un estudio<br>con identidad</h2>
+      <p class="about-body">Creemos que el buen diseño no es solo estética — es una herramienta estratégica que impulsa ideas y proyectos hacia donde deben estar. No nos limitamos a ofrecer servicios; nos asociamos con nuestros clientes para convertir sus visiones en realidad, aprovechando nuestra creatividad e ingenio. Abordando el Desafío de Potenciar tu #Idea.</p>
+      <a href="#contacto" class="btn-primary">Empecemos un proyecto</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
+    <p class="section-label" style="color: #391274;">¿Tienes un proyecto?</p>
+    <h2 class="section-title">Hablemos.</h2>
+    <p class="contact-sub">Nos encanta escuchar ideas.<br>Mejor ser buscado por lo valioso que por lo económico.<br>La calidad siempre prevalece sobre el precio.<br>Escríbenos y encontramos la manera de hacerlo realidad.</p>
+
+    <a href="mailto:mediumsociedadcreativa@gmail.com" class="contact-email">mediumsociedadcreativa@gmail.com</a><br>
+
+       <a href="https://www.youtube.com/channel/UCjK4V4LGY8Phtf9JfYK6g6w" class="social-btn">YouTube</a>
+       <a href="https://www.facebook.com/medium.sociedadcreativa.5" class="social-btn">Facebook</a>
+       <a href="https://www.behance.net/mediumsocieda" class="social-btn" target="_blank" rel="noopener">Behance</a>
+       <a href="https://www.linkedin.com/in/ruthermi-castilla-a9309011a/" class="social-btn">LinkedIn</a>
+      <a href="https://mediumsociedadcreativa.blogspot.com/" class="social-btn">Blogger</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Medium Sociedad Creativa</span> · Mérida, Yucatán · Todos los derechos reservados</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  function closeNav() {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }
+
+  // Cerrar menú al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (links.classList.contains('open')) closeNav();
+  }, { passive: true });
+</script>
+
+</body>
+</html>
