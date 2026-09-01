@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCXKM862');</script>
+<!-- End Google Tag Manager -->
+ 
+<title>Medium Estudio · Ideas que comunican</title>
+<link rel="canonical" href="https://mediumestudio.xyz/">
+<link rel="icon" href="imagenes/favicon.webp" type="image/png">
+
+<!-- SEO -->
+<meta name="description" content="Somos Medium Estudio, estudio de diseño visual en Mérida, Yucatán. Diseño editorial digital, sitios digitales e identidad visual con propósito e impacto. Hablemos.">
+<meta name="author" content="Medium Estudio">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn…) -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://mediumestudio.xyz/">
+<meta property="og:title"       content="Medium Estudio · Ideas que comunican">
+<meta property="og:description" content="Estudio de diseño visual en Mérida, Yucatán. Diseño editorial digital, sitios digitales e identidad visual con propósito e impacto.">
+<meta property="og:image"       content="https://mediumestudio.xyz/imagenes/og-image.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale"      content="es_MX">
+<meta property="og:site_name"   content="Medium Estudio">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:url"         content="https://mediumestudio.xyz/">
+<meta name="twitter:title"       content="Medium Estudio · Ideas que comunican">
+<meta name="twitter:description" content="Estudio de diseño visual en Mérida, Yucatán. Diseño editorial digital, sitios digitales e identidad visual con propósito e impacto.">
+<meta name="twitter:image"       content="https://mediumestudio.xyz/imagenes/og-image.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+ <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --lime: #b787ff;
+    --ink: #0F0F0F;
+    --blank: #FFFFFF;
+    --cream: #fffbf5;
+    --coral: #cd5302;
+    --verde: #009658;
+    --muted: #6B6B6B;
+    --gold: #D4AF37;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--ink);
+    border-bottom: 2px solid var(--lime);
+  }
+  .nav-logo {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.1rem;
+    color: var(--lime); letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-size: 0.85rem; font-weight: 500;
+    color: #ccc; text-decoration: none;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--lime); }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: #ccc; border-radius: 2px;
+    transition: background .2s;
+  }
+  .nav-toggle:hover span { background: var(--lime); }
+
+  /* ── HERO ── */
+
+  .hero {
+    min-height: 90vh;
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+  }
+  .hero-left {
+    padding: 5rem 3rem 4rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--lime); color: var(--blank);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem; border-radius: 999px;
+    margin-bottom: 2rem; width: fit-content;
+  }
+  .hero-title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 800; line-height: 1.0;
+    color: #fff; letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title span { color: var(--lime); }
+  .hero-sub {
+    font-size: 1rem; font-weight: 300;
+    color: #aaa; line-height: 1.7;
+    max-width: 400px; margin-bottom: 2.5rem;
+  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--lime); color: var(--ink);
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.85rem 2rem; border-radius: 999px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(183,135,255,0.35); }
+
+  .btn-ghost {
+    background: transparent; color: #fff;
+    font-size: 0.9rem; font-weight: 400;
+    padding: 0.85rem 2rem; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    text-decoration: none; cursor: pointer;
+    transition: border-color .2s, color .2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+  .hero-right {
+    position: relative;
+    background: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-visual {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 3rem;
+  }
+
+  /* ── BLOQUE ÚNICO: HISTORIA / CAMPAÑA ── */
+
+  .story-block {
+    width: 100%; max-width: 340px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background: var(--gold);
+    color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 2rem;
+    cursor: pointer;
+    animation: fadeUp 0.8s ease both;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .story-block:hover {
+    transform: scale(1.03);
+    filter: brightness(1.06);
+    box-shadow: 0 16px 40px rgba(212,175,55,0.35);
+  }
+  .story-block::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 75% 20%, rgba(255,255,255,0.35), transparent 55%);
+    pointer-events: none;
+  }
+  .story-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.9rem;
+    position: relative; z-index: 1;
+  }
+  .story-title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.35rem;
+    letter-spacing: -0.01em; line-height: 1.25;
+    position: relative; z-index: 1;
+  }
+  .story-sub {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    opacity: 0.72; margin-top: 1rem;
+    position: relative; z-index: 1;
+  }
+
+  /* ── BAND ── */
+
+  .band {
+    background: var(--lime);
+    padding: 1rem 2rem;
+    display: flex; gap: 2rem; align-items: center;
+    flex-wrap: wrap;
+  }
+  .band-item {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink);
+  }
+  .band-dot { color: var(--coral); font-size: 1.4rem; line-height: 1; }
+
+  /* ── SERVICES ── */
+
+  .section { padding: 6rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 1.2rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--coral);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 3.5rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--ink); color: #fff;
+    border-radius: 16px; padding: 2rem;
+    transition: transform .25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card:hover { transform: translateY(-4px); }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+  }
+  .service-card.s1::before { background: var(--lime); }
+  .service-card.s2::before { background: var(--coral); }
+  .service-num {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: 2.5rem; color: rgba(255,255,255,0.08);
+    margin-bottom: 1rem;
+  }
+  .service-name {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 700;
+    font-size: 1.1rem; margin-bottom: 2rem;
+  }
+  .service-desc { font-size: 1.2rem; color: #999; line-height: 1.7; }
+
+  /* ── PORTFOLIO / TARJETAS ── */
+
+  .portfolio-section { background: var(--ink); padding: 6rem 2rem; }
+  .portfolio-section .section-title { color: #fff; }
+
+  .portfolio-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 18px;
+    padding: 1.35rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: fadeUp 0.7s ease both;
+  }
+  .portfolio-card:hover { transform: translateY(-6px) scale(1.02); filter: brightness(1.06); }
+
+  /* Alturas escalonadas para efecto dinámico */
+  .portfolio-card:nth-child(even) { margin-top: 3rem; }
+
+  .portfolio-card:nth-child(1) { animation-delay: 0.05s; }
+  .portfolio-card:nth-child(2) { animation-delay: 0.12s; }
+  .portfolio-card:nth-child(3) { animation-delay: 0.19s; }
+  .portfolio-card:nth-child(4) { animation-delay: 0.26s; }
+
+  .portfolio-card:nth-child(4n+1) { background: var(--lime); color: var(--ink); }
+  .portfolio-card:nth-child(4n+2) { background: var(--coral); color: #fff; }
+  .portfolio-card:nth-child(4n+3) { background: var(--verde); color: #fff; }
+  .portfolio-card:nth-child(4n+4) { background: #b00f84; color: #fff; }
+
+  .portfolio-num {
+    align-self: flex-end;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 1;
+    opacity: 0.28;
+  }
+
+  .portfolio-thumb {
+    flex: 1;
+    min-height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.15);
+  }
+  .portfolio-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .portfolio-card:hover .portfolio-thumb img { transform: scale(0.9); }
+
+  .portfolio-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .portfolio-tag {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .portfolio-arrow {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .portfolio-card:hover .portfolio-arrow { transform: translate(3px, -3px); }
+
+  /* ── NUEVOS ESTILOS: VENTANA MODAL Y SU CARRUSEL PRIVADO ── */
+
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s ease;
+    padding: 2rem;
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-container {
+    background: var(--ink);
+    border: 2px solid var(--lime);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 650px;
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  .modal-overlay.active .modal-container {
+    transform: translateY(0);
+  }
+  .modal-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: none; border: none;
+    color: #fff; font-size: 1.5rem;
+    cursor: pointer; transition: color 0.2s;
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--lime); }
+  
+  .modal-title {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.5rem;
+    color: #fff; margin-bottom: 1.5rem;
+    text-transform: uppercase; letter-spacing: -0.01em;
+  }
+  .modal-title span { color: var(--lime); }
+
+  /* Carrusel interno del Modal */
+
+  .modal-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #1A1A1A;
+  }
+  .modal-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .modal-slide {
+    min-width: 100%;
+  }
+  .modal-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  /* Variante cuadrada: usada por la historia/campaña del hero */
+  .modal-carousel.square .modal-slide img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .modal-btn {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; width: 40px; height: 40px;
+    border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; transition: background 0.2s, color 0.2s;
+    z-index: 5;
+  }
+  .modal-btn:hover { background: var(--lime); color: var(--ink); }
+  .modal-btn.prev { left: 0.75rem; }
+  .modal-btn.next { right: 0.75rem; }
+  
+  .modal-dots {
+    display: flex; justify-content: center;
+    gap: 6px; margin-top: 1rem;
+  }
+  .modal-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(255,255,255,0.25); border: none;
+    cursor: pointer; transition: background 0.2s, transform 0.2s;
+  }
+  .modal-dot.active { background: var(--lime); transform: scale(1.2); }
+
+  /* ── ABOUT ── */
+  .about-section { padding: 6rem 2rem; background: var(--cream); }
+  .about-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .about-visual {
+    background: var(--ink); border-radius: 20px;
+    padding: 3rem; display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .about-stat { display: flex; align-items: baseline; gap: 0.9rem; }
+  .stat-num {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800;
+    font-size: 3rem; color: var(--lime);
+  }
+  .stat-label { font-size: 1.2rem; color: #aaa; }
+  .stat-divider { border: none; border-top: 1px solid #2A2A2A; }
+  .about-text .section-title { margin-bottom: 1rem; }
+  .about-body { font-size: 1.2rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+
+  /* ── APP ── */
+  .app-section { padding: 6rem 2rem; background: var(--ink); }
+  .app-section .section-label { color: var(--lime); }
+  .app-section .section-title { color: #fff; }
+
+  .app-marquee {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0 2.5rem;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .app-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: appMarquee 26s linear infinite;
+  }
+  .app-marquee:hover .app-marquee-track { animation-play-state: paused; }
+
+  .app-marquee-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .app-marquee-name {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 800; font-size: 1.6rem;
+    letter-spacing: -0.01em; text-transform: uppercase;
+    color: #450c9c;
+  }
+  .app-marquee-tag {
+    font-size: 1rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin-top: 0.2rem;
+  }
+  .app-marquee-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* o el display que ya tenga .app-marquee-item */
+  }
+  .app-marquee-dot { color: var(--coral); font-size: 1.4rem; line-height: 1; }
+
+  @keyframes appMarquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .app-marquee-track { animation: none; }
+    .app-marquee { overflow-x: auto; }
+  }
+
+  .app-legend {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.6;
+  }
+  .app-legend a {
+    color: var(--lime); font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--lime);
+  }
+  .app-legend a:hover { color: #fff; border-color: #fff; }
+
+
+  /* ── Ajustes de contraste: "Somos" ahora vive en fondo oscuro (.app-section) ── */
+  .app-section .about-body { color: rgba(255,255,255,0.78); }
+  .app-section .about-visual { background: #1A1A1A; border: 1px solid rgba(255,255,255,0.12); }
+
+  /* ── Ajustes de contraste: "Nuestras App" ahora vive en fondo claro (.about-section) ── */
+  .about-section .app-legend { color: var(--muted); }
+  .about-section .app-legend a { color: var(--coral); border-color: var(--coral); }
+  .about-section .app-legend a:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--blank); padding: 5rem 2rem; text-align: center; }
+  .contact-inner { max-width: 640px; margin: 0 auto; }
+  .contact-section .section-title { color: var(--ink); margin-bottom: 1rem; }
+  .contact-sub { font-size: 1.5rem; color: #181818; margin-bottom: 2.5rem; line-height: 1.7; }
+  .contact-email {
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 500;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--ink); text-decoration: none;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 0.2rem;
+    display: inline-block; margin-bottom: 2.5rem;
+    word-break: break-all;
+  }
+  .social-row {
+    display: flex; gap: 1rem;
+    justify-content: center; flex-wrap: wrap;
+  }
+  .social-btn {
+    background: var(--ink); color: var(--lime);
+    font-family: 'Cabinet Grotesk', sans-serif; font-weight: 700;
+    font-size: 0.8rem; letter-spacing: 0.1em;
+    padding: 0.9rem 1.7rem; border-radius: 999px;
+    text-decoration: none; transition: transform .2s;
+    display: inline-block;
+  }
+  .social-btn:hover { transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink); color: #d2d2d2;
+    text-align: center; padding: 2rem;
+    font-size: 0.8rem;
+  }
+  footer span { color: var(--lime); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { animation: fadeUp 0.7s ease both; }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — TABLET (max 1024px)
+  ══════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .about-inner { gap: 3rem; }
+    .portfolio-card { width: 150px; height: 340px; }
+    .portfolio-card:nth-child(even) { margin-top: 2rem; }
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — MÓVIL (max 768px)
+  ══════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--ink);
+      border-top: 1px solid #222;
+      padding: 0.5rem 0;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 0.85rem 2rem;
+      border-bottom: 1px solid #1a1a1a;
+      font-size: 1rem;
+    }
+    .nav-toggle { display: flex; }
+    nav { position: relative; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 3rem 1.5rem 3rem; }
+    
+    /* MODIFICADO: En móvil ahora SÍ se ven los cuadros interactivos debajo del texto principal */
+    .hero-right { 
+      display: flex; 
+      background: transparent; 
+      padding-bottom: 3rem;
+    }
+    .hero-visual { padding: 1rem; }
+
+    .band {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .band-dot { display: none; }
+
+    .section { padding: 4rem 1.25rem; }
+    .portfolio-section { padding: 4rem 1.25rem; }
+    .about-section { padding: 4rem 1.25rem; }
+    .app-section { padding: 4rem 1.25rem; }
+    .contact-section { padding: 3.5rem 1.25rem; }
+
+    .app-marquee-name { font-size: 1.15rem; }
+    .app-marquee-tag { font-size: 0.6rem; }
+    .app-marquee-track { gap: 1.75rem; animation-duration: 18s; }
+    .app-legend { font-size: 0.9rem; }
+
+    .services-grid { grid-template-columns: 1fr; }
+
+    /* Portafolio móvil: apilado en una columna, sin scroll horizontal */
+    .portfolio-row { flex-direction: column; align-items: center; gap: 1.1rem; }
+    .portfolio-card { width: 100%; max-width: 340px; height: 300px; margin-top: 0 !important; }
+    .portfolio-num { font-size: 2.2rem; }
+    .portfolio-tag { font-size: 0.8rem; }
+
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .about-visual { padding: 2rem; }
+    .stat-num { font-size: 2.2rem; }
+    .stat-label { font-size: 1rem; }
+
+    .contact-sub { font-size: 1.1rem; }
+    
+    /* Modal responsive */
+    .modal-container { padding: 2.5rem 1rem 1.5rem; margin: 0 1rem; }
+    .modal-slide img { height: 280px; }
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE — MÓVIL PEQUEÑO (max 400px)
+  ══════════════════════════════════════ */
+  @media (max-width: 400px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-cta { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; }
+    .portfolio-card { height: 260px; }
+    .modal-slide img { height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCXKM862"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="https://mediumsociedadcreativa-jpg.github.io/estudio/">
+    <img src="imagenes/msc-logo.webp" width="150" alt="Medium Estudio">
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="#servicios" onclick="closeNav()">Ofrecemos</a>
+    <a href="#portafolio" onclick="closeNav()">Ideas</a>
+    <a href="#app" onclick="closeNav()">App</a>
+    <a href="#nosotros" onclick="closeNav()">Conócenos</a>
+    <a href="#contacto" onclick="closeNav()">Cuéntanos</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left fade-in">
+    <span class="hero-tag">Studio de Diseño Visual</span>
+    <h1 class="hero-title"><span>Ideas </span> que<br>comunican.<br><span>Que</span> impactan.</h1>
+    <p class="hero-sub">Innovar es una actividad de riesgo cuyo principal riesgo es no practicarla. Nos gusta desafiar las convenciones. Transformamos ideas en experiences visuales memorables.</p>
+    <div class="hero-cta">
+      <a href="#nosotros" class="btn-primary">Conócenos</a>
+      <a href="#contacto" class="btn-ghost">Hablemos →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="story-block" id="storyBlock">
+        <span class="story-title">¿Qué sucedió en esta historia? 🤔</span>
+        <span class="story-sub">Puedes describirlo en una sola palabra.</span>
+        <span class="story-icon" aria-hidden="true">&#127916; &#8599;</span>          
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--VENTANA EMERGENTE (MODAL) PARA LOS CARRUSELES DE LOS BLOQUES -->
+
+<div class="modal-overlay" id="customModal">
+  <div class="modal-container">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar">&times;</button>
+    <h3 class="modal-title" id="modalTitle">Categoría</h3>
+    
+    <div class="modal-carousel">
+      <button class="modal-btn prev" id="modalPrevBtn">&#8592;</button>
+      <div class="modal-track" id="modalTrack">
+        <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
+      </div>
+      <button class="modal-btn next" id="modalNextBtn">&#8594;</button>
+    </div>
+    
+    <div class="modal-dots" id="modalDots"></div>
+  </div>
+</div>
+
+<!-- BAND -->
+
+<div class="band">
+  <span class="band-dot" style="color: var(--blank);">✦</span>
+  <span class="band-item">Estamos aquí para ayudarte, nutrir tu creatividad y llevar tus ideas más lejos.</span>
+  <span class="band-dot" style="color: var(--blank);">✦</span>
+  <span class="band-item">Mérida · Yucatán · México</span>
+</div>
+
+<!-- SERVICES -->
+
+<section class="section" id="servicios">
+  <div class="section-inner">
+    <p class="section-label">P r e s t a c i ó n   &#10022; </p>
+    <h2 class="section-title">Servicio</h2>
+    <div class="services-grid">
+      <div class="service-card s1">
+        <div class="service-num">01</div>
+        <h3 class="service-name">Diseño editorial digital</h3>
+        <p class="service-desc">→ Aquí caben ebooks, revistas, informes, storytelling visual, incluso tus proyectos infantiles.</p>
+      </div>
+      <div class="service-card s2">
+        <div class="service-num">02</div>
+        <h3 class="service-name">Diseño de sitios digitales</h3>
+        <p class="service-desc">→ Aquí caben landing pages, estructura de contenido, identidad visual, experiencia digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO — CARRUSEL -->
+
+<section class="portfolio-section" id="portafolio">
+  <div class="section-inner">
+    <p class="section-label" style="color: var(--lime);">P o r t a f o l i o   <span class="band-dot" style="color: var(--blank);">✦</span></p>
+    <h2 class="section-title">Ideas Desarrolladas</h2>
+
+    <!-- 4 tarjetas verticales: clic para ampliar -->
+
+    <div class="portfolio-row" id="portfolioRow">
+      <div class="portfolio-card" data-index="0">
+        <span class="portfolio-num">01</span>
+        <div class="portfolio-thumb">
+          <img src="imagenes/01-disenio-editorial-1.webp" alt="Diseño Editorial Digital" loading="lazy">
+        </div>
+        <div class="portfolio-bottom">
+          <span class="portfolio-tag">Diseño Editorial</span>
+          <span class="portfolio-arrow" aria-hidden="true">&#8599;</span>
+        </div>
+      </div>
+      <div class="portfolio-card" data-index="1">
+        <span class="portfolio-num">02</span>
+        <div class="portfolio-thumb">
+          <img src="imagenes/02-ilustracion-digital-1.webp" alt="Ilustración digital" loading="lazy">
+        </div>
+        <div class="portfolio-bottom">
+          <span class="portfolio-tag">Ilustración digital</span>
+          <span class="portfolio-arrow" aria-hidden="true">&#8599;</span>
+        </div>
+      </div>
+      <div class="portfolio-card" data-index="2">
+        <span class="portfolio-num">03</span>
+        <div class="portfolio-thumb">
+          <img src="imagenes/03-app-cuento-1.webp" alt="Cuento interactivo" loading="lazy">
+        </div>
+        <div class="portfolio-bottom">
+          <span class="portfolio-tag">Cuento interactivo</span>
+          <span class="portfolio-arrow" aria-hidden="true">&#8599;</span>
+        </div>
+      </div>
+      <div class="portfolio-card" data-index="3">
+        <span class="portfolio-num">04</span>
+        <div class="portfolio-thumb">
+          <img src="imagenes/04-sitio-digital-1.webp" alt="Sitio Digital" loading="lazy">
+        </div>
+        <div class="portfolio-bottom">
+          <span class="portfolio-tag">Sitio Digital</span>
+          <span class="portfolio-arrow" aria-hidden="true">&#8599;</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- APP (ahora con fondo claro, para que encaje la captura del Ahorcado) -->
+<section class="about-section" id="app">
+  <div class="section-inner">
+    <p class="section-label">A p p s   &#10022; </p>
+    <h2 class="section-title">Clientes</h2>
+
+    <!-- ══════════════════════════════════════
+         CONTENIDO DE EJEMPLO — edítalo libremente.
+         Cada .app-marquee-item es una app propia o un cliente.
+         El bloque se repite 2 veces abajo (mismo contenido) para
+         que el loop sea continuo y sin cortes — si agregas o quitas
+         un item, hazlo IGUAL en ambas copias.
+    ══════════════════════════════════════ -->
+    <div class="app-marquee">
+      <div class="app-marquee-track" id="appMarqueeTrack">
+
+        <!-- ── Copia 1 ── -->
+
+        <a href="https://github.com/mediumsociedadcreativa-jpg/abre-juega-sonrie-te-vas/tree/main/ahorcado" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Ahorcado</span>
+          <span class="app-marquee-tag">Juego Libre &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Jardín Mágico </span>
+          <span class="app-marquee-tag">🔐 App Juego </span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/motty/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Motty 📖</span>
+          <span class="app-marquee-tag">Sitio web escritora &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/abre-juega-sonrie-te-vas/sopa-letras/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Sopa de letras </span>
+          <span class="app-marquee-tag">Juego Libre &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://perfumesdeimitacion.com.mx/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Perfumes de Imitación</span>
+          <span class="app-marquee-tag">Sitio web &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/la-luz-de-la-luna/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">La luz de la luna</span>
+          <span class="app-marquee-tag">APP Cuento Interactivo &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Café Cósmico</span>
+          <span class="app-marquee-tag">🔐 App Oráculo</span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Cuentos que no son cuentos</span>
+          <span class="app-marquee-tag">🔐 App Cuento Interactivo</span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/laris-llora-mucho/" target="_blank" rel="noopener" class="app-marquee-link">
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Laris llora mucho </span>
+          <span class="app-marquee-tag">App Cuento Interactivo &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+
+        <!-- ── Copia 2 (idéntica, no borrar — hace el loop continuo) ── -->
+
+        <a href="https://github.com/mediumsociedadcreativa-jpg/abre-juega-sonrie-te-vas/tree/main/ahorcado" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Ahorcado</span>
+          <span class="app-marquee-tag">Juego Libre &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Jardín Mágico </span>
+          <span class="app-marquee-tag">🔐 App Juego </span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/motty/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Motty 📖</span>
+          <span class="app-marquee-tag">Sitio web escritora &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/abre-juega-sonrie-te-vas/sopa-letras/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Sopa de letras </span>
+          <span class="app-marquee-tag">Juego Libre &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://perfumesdeimitacion.com.mx/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">Perfumes de Imitación</span>
+          <span class="app-marquee-tag">Sitio web &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/la-luz-de-la-luna/" target="_blank" rel="noopener" class="app-marquee-link">
+        <div class="app-marquee-item">
+          <span class="app-marquee-name">La luz de la luna</span>
+          <span class="app-marquee-tag">APP Cuento Interactivo &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Café Cósmico</span>
+          <span class="app-marquee-tag">🔐 App Oráculo</span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Cuentos que no son cuentos</span>
+          <span class="app-marquee-tag">🔐 App Cuento Interactivo</span>
+        </div>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+        <a href="https://mediumsociedadcreativa-jpg.github.io/laris-llora-mucho/" target="_blank" rel="noopener" class="app-marquee-link">
+         <div class="app-marquee-item">
+          <span class="app-marquee-name">Laris llora mucho </span>
+          <span class="app-marquee-tag">App Cuento Interactivo &#8599;</span>
+        </div>
+        </a>
+
+        <span class="app-marquee-dot" aria-hidden="true">&#10022;</span>
+
+
+      </div>
+    </div>
+
+    <p class="app-legend">¿Deseas instalar la app libre de anuncios en tu celular?</p>
+    <p class="app-legend"><a href="#contacto" onclick="closeNav()">Escríbenos</a>, y te decimos cómo puedes descargarlo.</p>
+  </div>
+</section>
+
+<!-- ABOUT (ahora con fondo oscuro, justo antes de Hablemos) -->
+<section class="app-section" id="nosotros">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-stat">
+        <span class="stat-num">+20</span>
+        <span class="stat-label">años de experiencia</span>
+      </div>
+      <hr class="stat-divider">
+      <div class="about-stat">
+        <span class="stat-num">+Ideas</span>
+        <span class="stat-label">inspiradoras, con impacto</span>
+      </div>
+      <hr class="stat-divider">
+      <div class="about-stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">diseño con propósito</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Somos   <span class="band-dot" style="color: var(--blank);">✦</span></p>
+      <h2 class="section-title">Un estudio<br>con identidad</h2>
+      <p class="about-body">Creemos que el buen diseño no es solo estética — es una herramienta estratégica que impulsa ideas y proyectos hacia donde deben estar. No nos limitamos a ofrecer servicios; nos asociamos con nuestros clientes para convertir sus visiones en realidad, aprovechando nuestra creatividad e ingenio. Abordando el Desafío de Potenciar tu #Idea.</p>
+      <a href="#contacto" class="btn-primary">Empecemos un proyecto</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
+    <p class="section-label" style="color: #33027d;">¿Tienes un proyecto?</p>
+    <h2 class="section-title">¡Hablemos!</h2>
+    <p class="contact-sub">Nos encanta escuchar ideas.<br>Mejor ser buscado por lo valioso que por lo económico.<br>La calidad siempre prevalece sobre el precio.<br>Escríbenos y encontramos la manera de hacerlo realidad.</p>
+
+    <a href="mailto:mediumsociedadcreativa@gmail.com" class="contact-email">mediumsociedadcreativa@gmail.com</a><br>
+
+    <a href="https://www.youtube.com/channel/UCjK4V4LGY8Phtf9JfYK6g6w" class="social-btn">YouTube</a>
+    <a href="https://www.facebook.com/medium.sociedadcreativa.5" class="social-btn">Facebook</a>
+    <a href="https://www.behance.net/mediumsocieda" class="social-btn" target="_blank" rel="noopener">Behance</a>
+    <a href="https://www.linkedin.com/in/ruthermi-castilla-a9309011a/" class="social-btn">LinkedIn</a>
+    <a href="https://mediumsociedadcreativa.blogspot.com/" class="social-btn">Blogger</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Medium Studio </span> · Mérida, Yucatán · Todos los derechos reservados</p>
+</footer>
+
+<script>
+
+  /* ── MENÚ HAMBURGUESA ── */
+
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  function closeNav() {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (links.classList.contains('open')) closeNav();
+  }, { passive: true });
+
+  /* ── SCRIPT PARA MODAL, LA HISTORIA DEL HERO Y EL PORTAFOLIO ── */
+
+  (function() {
+    // Actos de la campaña. Agrega, quita o reordena actos aquí libremente; no hay límite.
+    const campaignActs = [
+      { src: "imagenes/acto1.webp", alt: "Acto 1 · Estoy lista",       title: "Acto 1 <span>¡Estoy Lista!</span>" },
+      { src: "imagenes/acto2.webp", alt: "Acto 2 · La oficina",        title: "Acto 2 <span>La Oficina</span>" },
+      { src: "imagenes/acto3.webp", alt: "Acto 3 · ¡Mmm!...",          title: "Acto 3 <span>¡Mmm!...</span>" },
+      { src: "imagenes/acto4.webp", alt: "Acto 4 · ¿Qué pasó?",        title: "Acto 4 <span>Lo que sucedió... 🤔</span>" }
+    ];
+
+    //  ── Galerías independientes del Portafolio: cada tarjeta abre SOLO sus propias imágenes ──//
+    //  Para agregar/quitar imágenes de una categoría, solo ajusta el número "count" de esa categoría.
+    function buildActGallery(baseName, count, labelSingular) {
+      const arr = [];
+      for (let i = 1; i <= count; i++) {
+        arr.push({ src: `imagenes/${baseName}-${i}.webp`, alt: `${labelSingular} ${i}` });
+      }
+      return arr;
+    }
+
+    const portfolioGalleries = [
+      { title: "Diseño <span>Editorial</span>",     images: buildActGallery("01-disenio-editorial",    4, "Diseño Editorial") },
+      { title: "Ilustración <span>Digital</span>",  images: buildActGallery("02-ilustracion-digital",  5, "Ilustración Digital") },
+      { title: "Cuento <span>Interactivo</span>",   images: buildActGallery("03-app-cuento",           3, "Cuento Interactivo") },
+      { title: "Sitio <span>Digital</span>",        images: buildActGallery("04-sitio-digital",        2, "Sitio Digital") }
+    ];  
+
+    const modal        = document.getElementById('customModal');
+    const modalCarousel = document.querySelector('.modal-carousel');
+    const modalTrack    = document.getElementById('modalTrack');
+    const modalTitle    = document.getElementById('modalTitle');
+    const modalDots     = document.getElementById('modalDots');
+    const closeBtn       = document.getElementById('modalCloseBtn');
+    const prevBtn         = document.getElementById('modalPrevBtn');
+    const nextBtn         = document.getElementById('modalNextBtn');
+
+    let currentSlide  = 0;
+    let totalSlides   = 0;
+    let currentTitles = null; // si viene, el título cambia por diapositiva
+
+    // Abre el modal con un título (fijo o por diapositiva), un arreglo de {src, alt, title?} y una diapositiva inicial.
+    // square: true fuerza las imágenes de este modal a formato 1:1.
+
+    function openGallery(defaultTitleHTML, images, startIndex, square) {
+      const hasPerSlideTitles = images.some(img => typeof img === 'object' && img.title);
+      currentTitles = hasPerSlideTitles
+        ? images.map(img => (typeof img === 'object' && img.title) ? img.title : defaultTitleHTML)
+        : null;
+
+      modalTitle.innerHTML = currentTitles ? currentTitles[startIndex || 0] : defaultTitleHTML;
+      modalTrack.innerHTML = '';
+      modalDots.innerHTML = '';
+      modalCarousel.classList.toggle('square', !!square);
+
+      images.forEach((img, i) => {
+        const src = typeof img === 'string' ? img : img.src;
+        const alt = typeof img === 'string' ? `Muestra ${i + 1}` : (img.alt || `Muestra ${i + 1}`);
+
+        // Crear Slide
+        const slide = document.createElement('div');
+        slide.className = 'modal-slide';
+        slide.innerHTML = `<img src="${src}" alt="${alt}">`;
+        modalTrack.appendChild(slide);
+
+        // Crear Punto Indicator
+        const dot = document.createElement('button');
+        dot.className = 'modal-dot' + (i === (startIndex || 0) ? ' active' : '');
+        dot.addEventListener('click', () => moveCarousel(i));
+        modalDots.appendChild(dot);
+      });
+
+      currentSlide = startIndex || 0;
+      totalSlides  = images.length;
+
+      // Ocultar flechas si solo hay una imagen
+      if (totalSlides <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+      } else {
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+      }
+
+      updateModalCarouselUI();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Detiene el scroll del fondo
+    }
+
+    // Abrir Modal desde el bloque dorado "¿Qué pasó en la junta?"
+    const storyBlock = document.getElementById('storyBlock');
+    if (storyBlock) {
+      storyBlock.addEventListener('click', () => {
+        openGallery('La Historia', campaignActs, 0, true);
+      });
+    }
+
+    // Abrir Modal desde las tarjetas "Trabajo reciente / Portafolio"
+    // Abrir Modal desde las tarjetas "Portafolio": cada una abre solo su propia categoría
+    document.querySelectorAll('.portfolio-card').forEach(item => {
+      item.addEventListener('click', () => {
+        const idx = parseInt(item.getAttribute('data-index'), 10) || 0;
+        const gallery = portfolioGalleries[idx];
+        if (!gallery) return;
+        openGallery(gallery.title, gallery.images, 0);
+      });
+    });
+
+    // Control del carrusel interno
+    function moveCarousel(index) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      updateModalCarouselUI();
+    }
+
+    function updateModalCarouselUI() {
+      modalTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      const dots = modalDots.querySelectorAll('.modal-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlide);
+      });
+      if (currentTitles) {
+        modalTitle.innerHTML = currentTitles[currentSlide];
+      }
+    }
+
+    prevBtn.addEventListener('click', () => moveCarousel(currentSlide - 1));
+    nextBtn.addEventListener('click', () => moveCarousel(currentSlide + 1));
+
+    // Cerrar Modal
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Devuelve el scroll
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    
+    // Soporte para tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  })();
+</script>
+
+</body>
+</html>
